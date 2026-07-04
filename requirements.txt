@@ -1,0 +1,5 @@
+C++17
+GCC/G++ Compiler
+Standard Template Library (STL)
+Visual Studio Code
+Git
