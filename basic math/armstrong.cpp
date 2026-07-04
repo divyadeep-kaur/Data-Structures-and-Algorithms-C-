@@ -3,7 +3,7 @@
 using namespace std;
 //armstrong number
 /*
-1634 --> 1**3 + 6**3 + 3**3 + 4**3 = 1634
+1634 --> 1**4 + 6**4 + 3**4 + 4**4 = 1634
 */
 void armstrong(int n){
     int orignal = n;
