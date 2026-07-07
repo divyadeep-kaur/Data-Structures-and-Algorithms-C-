@@ -1,30 +1,23 @@
 #include<iostream>
-#include<cmath>
+#include<vector>
 using namespace std;
-void prime(int n){
+void sortedfac(int n){
     // 2 3 5 7 9 11.....
     vector<int>ls;
     int count = 0;
     for( int i = 1 ; i*i <= n ; i++){
         if(n % i == 0){
-            count++;
             ls.push_back(i);
             if(n%i != i){
                 ls.push_back(n/i);
             }
         }
     }
-        if(count == 2){
-            cout<<n<<" yes it is prime number "<<endl;
-        }
-        else{
-            cout<<n<<" no it is not prime number "<<endl;
-        }
+    
+    sort(ls.begin(),ls.end());
+    for(auto it : ls)cout<<it<<" ";
 }
 int main(){
-    prime(2);
-    prime(3);
-    prime(6);
-    prime(11);
+    sortedfac(36);
     return 0;
 }
