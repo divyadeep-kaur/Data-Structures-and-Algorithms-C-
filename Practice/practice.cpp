@@ -1,17 +1,35 @@
 #include<iostream>
 using namespace std;
-int main(){//7789 --> 9877
+int main(){
     int num;
     int rev = 0;
-    cout<<"enter number to be reversed : "<<endl;
+    cout<<"enter the number you want to check is palindrome or not"<<endl;
     cin>>num;
+    int orignal = num;
     while(num>0){
-        int digit = num%10;
-        num=num/10;
-        rev=(rev*10)+digit;
+        int digit = num % 10;
+        num = num / 10;
+        rev = (rev*10)+digit;
     }
-    cout<<rev;
+    if(orignal == rev){
+        cout<<"yes it is palindrome"<<endl;
+    }
+    else{
+        cout<<"no it is not palindrome"<<endl;
+    }
 }
+// int main(){//7789 --> 9877
+//     int num;
+//     int rev = 0;
+//     cout<<"enter number to be reversed : "<<endl;
+//     cin>>num;
+//     while(num>0){
+//         int digit = num%10;
+//         num=num/10;
+//         rev=(rev*10)+digit;
+//     }
+//     cout<<rev;
+// }
 // int main(){
 //     for( int i = 1; i<= 4 ; i++){
 //         for(int j = 1 ; j<= i ; j++){

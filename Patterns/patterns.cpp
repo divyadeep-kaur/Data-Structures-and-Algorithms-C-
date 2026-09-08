@@ -358,6 +358,6 @@ j
 */
 }
 int main(){
-    pattern16(3);
+    pattern4();
     return 0;
 }
