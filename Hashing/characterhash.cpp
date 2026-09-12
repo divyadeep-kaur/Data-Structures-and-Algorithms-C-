@@ -1,9 +1,8 @@
 #include<iostream>
 using namespace std;
-
 int main(){
-    char a;
-    int n;
+    char a; //character 
+    int n; //number of characters i want in an array
     cout<<"enter the number of characters you want to add in an array "<<endl;
     cin>>n;
     char arr[n];
