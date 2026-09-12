@@ -1,23 +1,47 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int num;
-    int rev = 0;
-    cout<<"enter the number you want to check is palindrome or not"<<endl;
-    cin>>num;
-    int orignal = num;
-    while(num>0){
-        int digit = num % 10;
-        num = num / 10;
-        rev = (rev*10)+digit;
+    int n;
+    cout<<"enter the number of elements to add in array "<<endl;
+    cin>>n;
+    int arr[n];
+    for(int i = 0;i>=n ; i++){
+        cout<<"enter element "<<i<<"of array "<<endl;
+        cin>>arr[i];
     }
-    if(orignal == rev){
-        cout<<"yes it is palindrome"<<endl;
+    int hash[12] = {0};
+    for(int i = 0;i<=12 ; i++){
+        hash[arr[i]]+=1;
     }
-    else{
-        cout<<"no it is not palindrome"<<endl;
+    int query;
+    cout<<"enter the number of queries you want to ask "<<endl;
+    cin>>query;
+    while(query--){
+        int number;
+        cout<<"enter query "<<endl;
+        cin>>number;
+        cout<<"the element has appeared "<<hash[number]<<endl;
+
     }
 }
+// int main(){
+//     int num;
+//     int rev = 0;
+//     cout<<"enter the number you want to check is palindrome or not"<<endl;
+//     cin>>num;
+//     int orignal = num;
+//     while(num>0){
+//         int digit = num % 10;
+//         num = num / 10;
+//         rev = (rev*10)+digit;
+//     }
+//     if(orignal == rev){
+//         cout<<"yes it is palindrome"<<endl;
+//     }
+//     else{
+//         cout<<"no it is not palindrome"<<endl;
+//     }
+// }
 // int main(){//7789 --> 9877
 //     int num;
 //     int rev = 0;
