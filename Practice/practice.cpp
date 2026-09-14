@@ -1,29 +1,61 @@
 #include<iostream>
 using namespace std;
-int main(){
-    int n;
-    cout<<"enter the number of elements to add in array "<<endl;
-    cin>>n;
-    int arr[n];
-    for(int i = 0;i>=n ; i++){
-        cout<<"enter element "<<i<<"of array "<<endl;
-        cin>>arr[i];
+void selection_sort(int arr[],int n){
+    for (int i = 0; i < n-1; i++){
+        int minIndex = i;
+        for(int j = i+1 ; j<n ; j++){
+            if(arr[j]<arr[minIndex]){
+                minIndex = j;
+            }
+        }
+        // swap(arr[i],arr[minIndex]);
+        int temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i]=temp;
     }
-    int hash[12] = {0};
-    for(int i = 0;i<=12 ; i++){
-        hash[arr[i]]+=1;
-    }
-    int query;
-    cout<<"enter the number of queries you want to ask "<<endl;
-    cin>>query;
-    while(query--){
-        int number;
-        cout<<"enter query "<<endl;
-        cin>>number;
-        cout<<"the element has appeared "<<hash[number]<<endl;
-
-    }
+    
 }
+    int main(){
+        int n;
+        cout<<"how many elements do you want to add in your array "<<endl;
+        cin>>n;
+        int arr[n];
+        for (int i = 0; i < n; i++)
+        {
+            cout<<"Enter the element: "<<endl;
+            cin>>arr[i];
+        }
+        selection_sort(arr,n);
+        for (int display = 0; display < n; display++)
+        {
+            cout<<arr[display]<<" ";
+        }
+        return 0; 
+    }
+// int main(){
+//     int n;
+//     cout<<"enter the number of elements to add in array "<<endl;
+//     cin>>n;
+//     int arr[n];
+//     for(int i = 0;i>=n ; i++){
+//         cout<<"enter element "<<i<<"of array "<<endl;
+//         cin>>arr[i];
+//     }
+//     int hash[12] = {0};
+//     for(int i = 0;i<=12 ; i++){
+//         hash[arr[i]]+=1;
+//     }
+//     int query;
+//     cout<<"enter the number of queries you want to ask "<<endl;
+//     cin>>query;
+//     while(query--){
+//         int number;
+//         cout<<"enter query "<<endl;
+//         cin>>number;
+//         cout<<"the element has appeared "<<hash[number]<<endl;
+
+//     }
+// }
 // int main(){
 //     int num;
 //     int rev = 0;
